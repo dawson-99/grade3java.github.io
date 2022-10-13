@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <!--    <package name="validator" namespace="/" extends="struts-default">-->
+    <!--        <global-allowed-methods>regex:.*</global-allowed-methods>-->
+    <!--        <action name="login-*" class="validator.LoginAction" method="{1}">-->
+    <!--            <result name="successUser">/user.jsp</result>-->
+    <!--            <result name="successAdmin">/admin.jsp</result>-->
+    <!--            <result name="input">/index.jsp</result>-->
+    <!--        </action>-->
+    <!--    </package>-->
+    <package name="validator" namespace="/" extends="struts-default">
+        <global-allowed-methods>regex:.*</global-allowed-methods>
+        <action name="login-adminLogin" class="validator.LoginAction" method="adminLogin">
+            <result name="successAdmin">/admin.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+        <action name="login-userLogin" class="validator.LoginAction" method="userLogin">
+            <result name="successUser">/user.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+    </package>
+</struts>
